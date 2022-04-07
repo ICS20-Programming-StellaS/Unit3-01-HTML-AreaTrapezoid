@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+		<!-- Metadata -->
+    <meta charset="utf-8" />
+    <meta name="description" content="Area with JavaScript" />
+    <meta name="keywords" content="immaculata, ics2o" />
+    <meta name="author" content="Stella S" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Code for the favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./fav/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./fav/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./fav/favicon-16x16.png" />
+    <link rel="manifest" href="./fav/site.webmanifest" />
+
+    <!-- Code for the style sheets-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.cyan-teal.min.css"/>
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!--Title-->
+    <title>Area of a Trapezoid, with JavaScript</title>
+  </head>
+  <center><body>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="./js/script.js"></script>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">Area of a Trapezoid, with JS</span> 
+        </div>
+      </header>
+      <main class="mdl-layout__content">
+        <table>
+          <tr>
+            <th>
+
+              <!--Image-->
+              <img src="./image/area_of_trapezoid.jpg" alt="Trapezoid" width="100%" height="auto"/>
+            </th>
+            <th>
+              <center><h4>Formula for Area of a Trapezoid</h4></center>
+              <h4>A = 1/2 (a+b)h</h4>
+            </th>
+          </tr>
+        </table>
+
+        <p>Calculate the Area of a Trapezoid</p>
+        
+        <!--Simple Textfield -->
+        <center><form action="#">
+          <p>Side a (cm)</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="side-a-of-trapezoid"
+            />
+            <label class="mdl-textfield__label" for="base-1-of-trapezoid">Side a ...</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form></center>
+        
+        <!-- Simple Textfield -->
+        <center><form action="#">
+          <p>Side b (cm)</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="side-b-of-trapezoid"
+            />
+           <label class="mdl-textfield__label" for="base-2-of-trapezoid">Side b ...</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form></center>
+				
+        <!-- Numeric Textfield -->
+        <center><form action="#">
+          <p>Height (cm)</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="height-of-trapezoid"
+            />
+            <label class="mdl-textfield__label" for="height-of-trapezoid">Height ...</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form></center>
+				
+        <!-- Raised button with ripple -->
+        <button
+          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+          onclick="calculate()"
+        >
+          Calculate
+        </button>
+        
+        <div id="area"></div>
+      </main>
+    </div>
+  </center></body>
+</html>
